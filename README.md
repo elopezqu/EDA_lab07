@@ -73,9 +73,7 @@
                    ya que es un tipo generico, podemos usar Strings, Objetos, etc.<br>
                 4. Podemos usar los siguientes metodos: put(), get(), remove(), toString() y el clear()
             </p>
-            
         </li>
-        
     </ol>
   </ul>
 
