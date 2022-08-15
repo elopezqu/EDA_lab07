@@ -43,6 +43,21 @@
     <ol>
         <li>Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
         </li>
+        <h2>Metodo Get</h2>
+        <img src = "ejercicio1/imagenes/get.jpeg">
+        <p>
+            El metodo Get recibe como parametro una key de tipo generico<br>
+            y busca entre las claves y si esta contiene una lista enlazada<br>
+            va a iterar en esta hasta encontrarla
+        </p>
+        <h2>Metodo Put</h2>
+        <img src = "ejercicio1/imagenes/put.jpeg">
+        <p>
+            El metodo put va obtener la clave y va a verificar si la clave no existe<br>
+            y si se cumple esto la va a agregar, en caso que ya haya registros, va a agregar a la <br>
+            lista enlazada como un nuevo elemento iterando hasta llegar al final.
+            Y si esta ya existe lo actualiza.
+        </p>
         <h2>Método <em>ContainsKey</em></h2><br>
         Este método verifica si contiene un elemento enlazado a la clave respondiendo verdadero o falso(valor booleano) según corresponda. Para lograr esto se apoyará del valor de la clave para lograr rápidamente este objetivo.
         <pre>public boolean containsKey(K key)</pre><br>
@@ -77,6 +92,10 @@
         <img src="ejercicio1/imagenes/hashCode.PNG"><br>
         Lo que hace es que utiliza el método hashCode() que tiene por defecto cualquier objeto(ya que hereda de "Object") y posteriormente le saca el módulo de la variable "numBuckets", que vendría a ser el número de filas del hashMap. Asi obteniendo el código hash.
         <li>Es posible agregar otros métodos que les ayuden a su resolución.            
+        <li>
+        Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
+        </li>
+        <li>Es posible agregar otros métodos que les ayuden a su resolución.     
         </li>
         <em>Considerando que los métodos usados en este laboratorio son los suficientes para la implementación del Hash no se ha considerado aumentar métodos.</em>
         <li>Crear un archivo de test donde incluyen casos de prueba.
@@ -95,6 +114,17 @@
         <img src="ejercicio1/imagenes/prueba2.png"><br>
         Ejecución:<br>
         <img src="ejercicio1/imagenes/test1.png">
+        <img src="ejercicio1/imagenes/constructor.jpeg">
+            <h2>Instrucciones para usar el Programa</h2>
+            <p>
+                1. Se va a crear una instancia de HashMap y se le va a indicar los tipos de clave y valor<br>
+                2. El programa va a recibir un String como clave que luego sera convertido a una clave<br>
+                   Con la funcion hashCode.<br> 
+                3. El otro parametro que es el valor, va a recibir cualquier valor<br>
+                   ya que es un tipo generico, podemos usar Strings, Objetos, etc.<br>
+                4. Podemos usar los siguientes metodos: put(), get(), remove(), toString() y el clear()
+            </p>
+        </li>
     </ol>
   </ul>
 
