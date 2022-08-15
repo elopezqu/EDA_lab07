@@ -42,6 +42,19 @@
   <ul>
     <ol>
         <li>Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
+        
+          <em>
+            ContainsKey
+          </em>
+          <p>
+            Este método verifica si contiene un elemento enlazado a la clave respondiendo verdadero o falso(valor booleano) según corresponda. Para lograr esto se apoyará del valor de la clave para lograr rápidamente este objetivo.
+          </p>
+          <em>
+            ContainsValue
+          </em>
+          <p>
+            En este método se introduce un valor o elemento y  se tiene que recorrer toda la estructura hasta que un elemento coincida hasta que se encuentre un elemento igual al elemento ingresado, de manera similar que containsKey se retorna verdadero o falso si se encuentra un elemento igual al ingresado.
+          </p>
         </li>
         <li>Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo Lineal. 
         </li>
