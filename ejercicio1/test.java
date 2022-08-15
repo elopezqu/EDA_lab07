@@ -1,7 +1,6 @@
 public class test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		HashMap<String, Integer>map=new HashMap<>();
 		map.put("clave1", 100);
 		map.put("clave2", 120);

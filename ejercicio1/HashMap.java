@@ -20,7 +20,7 @@ public class HashMap<K, V> implements HashTable<K, V> {
         return size == 0;
     }
 
-    private int hashCode(K key) {
+    public int hashCode(K key) {
         int hashCod = key.hashCode();
         return Math.abs(hashCod % numBuckets);
     }
@@ -133,12 +133,4 @@ public class HashMap<K, V> implements HashTable<K, V> {
         return todo;
     }
 
-    public static void main(String[] args) {
-        HashMap<String, Integer> map = new HashMap<>();
-        map.put("this", 1);
-        System.out.println(map);
-        // System.out.println(map.remove("this"));
-        System.out.println(map.containsValue(1));
-
-    }
 }
