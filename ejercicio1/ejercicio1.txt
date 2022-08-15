@@ -1,1 +1,0 @@
-Deben contemplar como mínimo el desarrollo de todos los métodos en su clase.
