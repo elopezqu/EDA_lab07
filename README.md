@@ -43,6 +43,12 @@
     <ol>
         <li>Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
         </li>
+        <h2>Método <em>ContainsKey</em></h2><br>
+        Este método verifica si contiene un elemento enlazado a la clave respondiendo verdadero o falso(valor booleano) según corresponda. Para lograr esto se apoyará del valor de la clave para lograr rápidamente este objetivo.
+        <pre>public boolean containsKey(K key)</pre><br>
+        <h2>Método <em>ContainsValue</em></h2><br>
+        En este método se introduce un valor o elemento y  se tiene que recorrer toda la estructura hasta que un elemento coincida hasta que se encuentre un elemento igual al elemento ingresado, de manera similar que containsKey se retorna verdadero o falso si se encuentra un elemento igual al ingresado.
+        <pre>public boolean containsValue(V value)</pre><br>
         <h2>Método <em>Remove</em></h2>
         Este método recibe un parámetro, este parámetro es una variable genérica a la que se le llama K y retorna tambien una variable generica V.<br>
         <img src="ejercicio1/imagenes/remove.png"><br>
