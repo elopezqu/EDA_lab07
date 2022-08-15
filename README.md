@@ -43,6 +43,18 @@
     <ol>
         <li>Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
         </li>
+        <h2>Método <em>ToString</em></h2>
+        Este método recibe un parámetro, nos muestra fila por fila todos los elementos que estén en el HashMap en el siguiente formato: (Key: "llave" Value: "valor")<br>
+        <img src="ejercicio1/imagenes/toString.PNG"><br>
+        Lo que hace es que va pasa uno por uno cada elemento del arraylist y sobre cada elemento recorre la lista enlazada (siempre y cuando haya una elemento no NULO como siguiente nodo).
+        <h2>Método <em>Clear</em></h2>
+        Este método nos elimina cada elemento del HashMap.<br>
+        <img src="ejercicio1/imagenes/clear.PNG"><br>
+        Lo que hace es que elimina completamente todo el arrayList y posteriormente vuelve a inicializar todos los elementos en null, para posibilitar el volver a agregar elementos a nuestro hastMap VACÍO.
+        <h2>Método <em>HashCode</em></h2>
+        Este método nos retorna la clave de determinada "key".<br>
+        <img src="ejercicio1/imagenes/hashCode.PNG"><br>
+        Lo que hace es que utiliza el método hashCode() que tiene por defecto cualquier objeto(ya que hereda de "Object") y posteriormente le saca el módulo de la variable "numBuckets", que vendría a ser el número de filas del hashMap. Asi obteniendo el código hash.
         <li>Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo Lineal. 
         </li>
         <li>Es posible agregar otros métodos que les ayuden a su resolución.     
