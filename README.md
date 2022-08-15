@@ -53,7 +53,7 @@
   </ul>
 
   <tr><td><strong>III. CONCLUSIONES:</strong>
-  <br>-...</td></tr>
+  <br>Una tabla hash tiene como principal ventaja que el acceso a los datos suele ser muy rápido, producto de la manipulación de las claves por ciertos algoritmos. Esta se implenta en tablas con indices producto de esa manipulación</td></tr>
  </tbody>
 </table>
 <hr>
@@ -63,7 +63,13 @@
   </td><tr>
  </theader>
  <tbody>
-  <tr><td>-...</td></tr>
+  <tr><td>El hash o hashing es un método para convertir algún tipo de datos en un número
+relativamente pequeño que puede servir como una "huella digital" de los datos. El
+algoritmo hash manipula los datos para crear tales huellas digitales, llamadas valores
+hash. Estos valores hash se utilizan generalmente como índices en tablas hash.
+Lo que hace el hashing es tener un balance entre la cantidad de memoria a utilizar y las
+restricciones del tiempo al realizar operaciones en los registros (consultas, inserciones,
+eliminaciones, etc....). </td></tr>
  </tbody>
 </table>
 <hr>
