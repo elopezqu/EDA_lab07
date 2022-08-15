@@ -63,16 +63,17 @@
         </li>
         <li>Crear un archivo de test donde incluyen casos de prueba.
         </li>
-            Instrucciones para usar el Programa
             <img src="ejercicio1/imagenes/constructor.png">
-            <h2>
+            <h2>Instrucciones para usar el Programa</h2>
+            <p>
                 1. Se va a crear una instancia de HashMap y se le va a indicar los tipos de clave y valor<br>
                 2. El programa va a recibir un String como clave que luego sera convertido a una clave<br>
                    Con la funcion hashCode.<br> 
                 3. El otro parametro que es el valor, va a recibir cualquier valor<br>
                    ya que es un tipo generico, podemos usar Strings, Objetos, etc.<br>
                 4. Podemos usar los siguientes metodos: put(), get(), remove(), toString() y el clear()
-            </h2>
+            </p>
+            
         </li>
         
     </ol>
