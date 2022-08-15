@@ -81,6 +81,20 @@
         <em>Considerando que los métodos usados en este laboratorio son los suficientes para la implementación del Hash no se ha considerado aumentar métodos.</em>
         <li>Crear un archivo de test donde incluyen casos de prueba.
         </li>
+        Vista de la implementación del método put.<br>
+        <img src="ejercicio1/imagenes/put.png"><br>
+        Vista de la los otros métodos.<br>
+        <img src="ejercicio1/imagenes/metodos.png"><br>
+        Ejecución:<br>
+        <img src="ejercicio1/imagenes/test3.png">
+        Claves que no estan en el Hash<br>
+        <img src="ejercicio1/imagenes/prueba1.png"><br>
+        Ejecución:<br>
+        <img src="ejercicio1/imagenes/test2.png"><br>
+        Implementación de un valor que no esta en el Hash<br>
+        <img src="ejercicio1/imagenes/prueba2.png"><br>
+        Ejecución:<br>
+        <img src="ejercicio1/imagenes/test1.png">
     </ol>
   </ul>
 
