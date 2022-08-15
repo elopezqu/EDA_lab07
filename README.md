@@ -42,7 +42,7 @@
   <ul>
     <ol>
         <li>Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
-        
+          <p>
           <em>
             ContainsKey
           </em>
@@ -54,6 +54,7 @@
           </em>
           <p>
             En este método se introduce un valor o elemento y  se tiene que recorrer toda la estructura hasta que un elemento coincida hasta que se encuentre un elemento igual al elemento ingresado, de manera similar que containsKey se retorna verdadero o falso si se encuentra un elemento igual al ingresado.
+          </p>
           </p>
         </li>
         <li>Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo Lineal. 
