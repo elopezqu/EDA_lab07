@@ -74,7 +74,6 @@ public interface HashTable <K, V>{
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
     public V remove(K key);
-
     /**
      * Elimina todos los registros de la tabla hash
      * La tabla hash estara vacia despues de llamar a este metodo.
@@ -84,6 +83,8 @@ public interface HashTable <K, V>{
     /**
      * Retorna todos los elementos de la tabla hash.
      */
-    String toString();
+    public String toString();
+
+    public void clear();
 
 }
