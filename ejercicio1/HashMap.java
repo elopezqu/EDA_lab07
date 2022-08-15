@@ -24,7 +24,7 @@ public class HashMap implements HashTable{
         HashNode<K, V> head=bucket.get(i);
         while(head!=null){
           if(head.value.equals(value)){
-            respuesta=true;
+            return true;
           }
           head=head.next;
         }
