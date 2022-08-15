@@ -74,17 +74,18 @@ public interface HashTable <K, V>{
      * @throws NullPointerException si la clave es nula
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    V remove(K key);
-
+    public V remove(K key);
     /**
      * Elimina todos los registros de la tabla hash
      * La tabla hash estara vacia despues de llamar a este metodo.
      */
-    int hashCode();
+    public int hashCode(K key);
     
     /**
      * Retorna todos los elementos de la tabla hash.
      */
-    String toString();
+    public String toString();
+
+    void clear();
 
 }

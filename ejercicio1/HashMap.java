@@ -19,16 +19,33 @@ public class HashMap <K, V> implements HashTable<K,V>{
 	{
 		return size==0;
 	}
-	private int hashCode(K key)
+	public int hashCode(K key)
 	{
 		int hashCod=key.hashCode();
 		return Math.abs(hashCod % numBuckets);
 	}
     public boolean containsKey(K key){
-        return true;
+        int index=hashCode(key);                                                                                                                
+        HashNode<K, V> head=bucket.get(index);                                                                                                        
+        while(head!=null){                                                                                                                            
+          if(head.key.equals(key)){                                                                                                                   
+            return true;                                                                                                                              
+          }                                                                                                                                           
+          head=head.next;                                                                                                                             
+        }                                                                                                                                             
+        return false;    
     }
     public boolean containsValue(V value){
-        return true;
+        boolean respuesta=false;
+        for(int i=0;i<numBuckets;i++){
+            HashNode<K, V> head=bucket.get(i);
+            while(head!=null){
+                if(head.value.equals(value))
+                    respuesta=true;
+                head=head.next;
+            }
+        }
+		return respuesta;	
     }
 	public V get(K key)
 	{
@@ -148,6 +165,12 @@ public class HashMap <K, V> implements HashTable<K,V>{
             todo=todo+"\n";
         }
 		return todo;	
+	}
+    public void clear(){
+        bucket.clear();
+        for(int i=0;i<numBuckets;i++){
+			bucket.add(null);
+		}
 	}
     
 	public static void main(String[] args){
