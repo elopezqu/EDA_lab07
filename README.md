@@ -72,10 +72,8 @@
   <tr><td><strong>REFERENCIAS Y BIBLIOGRAFÍA</strong></td><tr>
  </theader>
  <tbody>
-  <tr><td>....</td></tr>
-  <tr><td>....</td></tr>
-  <tr><td>....</td></tr>
-  <tr><td>....</td></tr>
-  <tr><td>....</td></tr>
+  <tr><td>https://www.delftstack.com/es/howto/java/hashmap-hashset-hashtable-in-java/#:~:text=%2C%201%3Done%7D-,Java%20HashSet,m%C3%A1s%20la%20interfaz%20de%20Colecciones.</td></tr>
+  <tr><td>https://sites.google.com/a/espe.edu.ec/programacion-ii/home/tablas-hash</td></tr>
+  <tr><td>https://es.wikipedia.org/wiki/HashCode()_(Java)#:~:text=En%20el%20lenguaje%20de%20programaci%C3%B3n,defecto%2C%20por%20la%20clase%20Object.</td></tr>
  </tbody>
 </table>
