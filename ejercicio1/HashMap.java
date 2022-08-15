@@ -6,7 +6,19 @@ public class HashMap implements HashTable{
 
     public boolean isEmpty(){return true;}
 
-    public boolean containsKey(Object key){return true;}
+    public boolean containsKey(Object key){
+      int index=getBucketIndex(key);
+      HashNode<K, V> head=bucket.get(index);
+      while(head!=null)
+      {
+        if(head.key.equals(key))
+        {
+          return true;
+        }
+        head=head.next;
+      }
+      return false;
+    }
 
     public boolean containsValue(Object value){return true;}
 
