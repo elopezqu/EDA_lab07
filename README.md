@@ -43,6 +43,10 @@
     <ol>
         <li>Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
         </li>
+        <h2>Método <em>Remove</em></h2>
+        Este método recibe un parámetro, este parámetro es una variable genérica a la que se le llama K y retorna tambien una variable generica V.<br>
+        <img src="ejercicio1/imagenes/remove.png"><br>
+        Esta variable genérica pasa por el hashCode, para poder buscarlo en el ArrayList, si existe y verdaderamente es la clave que se busca (de lo contrario sigue al siguiente HashNode), lo remplaza por el siguiente en el ArrayList y se reduce el tamaño de la tabla, terminando el método con la devolución del elemento eliminado.
         <li>Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo Lineal. 
         </li>
         <li>Es posible agregar otros métodos que les ayuden a su resolución.     
