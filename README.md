@@ -46,7 +46,18 @@
         <h2>Método <em>Remove</em></h2>
         Este método recibe un parámetro, este parámetro es una variable genérica a la que se le llama K y retorna tambien una variable generica V.<br>
         <img src="ejercicio1/imagenes/remove.png"><br>
-        Esta variable genérica pasa por el hashCode, para poder buscarlo en el ArrayList, si existe y verdaderamente es la clave que se busca (de lo contrario sigue al siguiente HashNode), lo remplaza por el siguiente en el ArrayList y se resta a la variable size, que almacena el número de elementos contenidos en el ArrayList, terminando el método con la devolución del elemento eliminado.
+        Esta variable genérica pasa por el hashCode, para poder buscarlo en el ArrayList, si existe y verdaderamente es la clave que se busca (de lo contrario sigue al siguiente HashNode), lo remplaza por el siguiente en el ArrayList y se resta a la variable size, que almacena el número de elementos contenidos en el ArrayList.
+        <pre>
+        if(head.key.equals(key)){
+            V val=head.value;
+            head=head.next;
+            bucket.set(index, head);
+            size--;
+            return val;
+        }
+        else{...}
+        </pre>
+        Terminando el método con la devolución del elemento eliminado.
         <li>Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo Lineal. 
         </li>
         <li>Es posible agregar otros métodos que les ayuden a su resolución.            
