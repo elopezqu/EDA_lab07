@@ -1,2 +1,0 @@
-Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo
-Lineal.
