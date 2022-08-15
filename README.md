@@ -43,7 +43,22 @@
     <ol>
         <li>Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
         </li>
-        <li>Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo Lineal. 
+        <li>
+        <h2>Metodo Get</h2>
+        <img src = "ejercicio1/imagenes/getMethod.png">
+        <p>
+            El metodo Get recibe como parametro una key de tipo generico<br>
+            y busca entre las claves y si esta contiene una lista enlazada<br>
+            va a iterar en esta hasta encontrarla
+        </p>
+        <h2>Metodo Put</h2>
+        <img src = "ejercicio1/imagenes/putMethod.png">
+        <p>
+            El metodo put va obtener la clave y va a verificar si la clave no existe<br>
+            y si se cumple esto la va a agregar, en caso que ya haya registros, va a agregar a la <br>
+            lista enlazada como un nuevo elemento iterando hasta llegar al final.
+            Y si esta ya existe lo actualiza.
+        </p>
         </li>
         <li>Es posible agregar otros métodos que les ayuden a su resolución.     
         </li>
