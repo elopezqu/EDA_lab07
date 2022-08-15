@@ -1,5 +1,3 @@
-package Propuestos;
-
 public interface HashTable{
     /**
      * Retorna el numero de clave-valor registrado en la tabla hash.

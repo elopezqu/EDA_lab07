@@ -1,5 +1,3 @@
-import Propuestos.HashTable;
-
 public class HashMap implements HashTable{
 
     public int size(){return -1;}
