@@ -49,7 +49,7 @@
         Lo que hace es que va pasa uno por uno cada elemento del arraylist y sobre cada elemento recorre la lista enlazada (siempre y cuando haya una elemento no NULO como siguiente nodo).
         <h2>Método <em>Clear</em></h2>
         Este método nos elimina cada elemento del HashMap.<br>
-        <img src="ejercicio1/imagenes/clear.PNG"><br>
+        <img src="ejercicio1/imagenes/Clear.PNG"><br>
         Lo que hace es que elimina completamente todo el arrayList y posteriormente vuelve a inicializar todos los elementos en null, para posibilitar el volver a agregar elementos a nuestro hastMap VACÍO.
         <h2>Método <em>HashCode</em></h2>
         Este método nos retorna la clave de determinada "key".<br>
