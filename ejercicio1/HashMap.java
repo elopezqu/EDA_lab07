@@ -9,10 +9,8 @@ public class HashMap implements HashTable{
     public boolean containsKey(Object key){
       int index=getBucketIndex(key);
       HashNode<K, V> head=bucket.get(index);
-      while(head!=null)
-      {
-        if(head.key.equals(key))
-        {
+      while(head!=null){
+        if(head.key.equals(key)){
           return true;
         }
         head=head.next;
@@ -20,7 +18,19 @@ public class HashMap implements HashTable{
       return false;
     }
 
-    public boolean containsValue(Object value){return true;}
+    public boolean containsValue(Object value){
+
+      for(int i=0;i<numBuckets;i++){
+        HashNode<K, V> head=bucket.get(i);
+        while(head!=null){
+          if(head.value.equals(value)){
+            respuesta=true;
+          }
+          head=head.next;
+        }
+      }
+      return false;
+    }
 
     public Integer get(String key){return -1;}
 
