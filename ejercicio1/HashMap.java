@@ -1,22 +1,144 @@
-public class HashMap implements HashTable{
+import java.util.ArrayList;
 
-    public int size(){return -1;}
+public class HashMap<K, V> implements HashTable<K, V> {
 
-    public boolean isEmpty(){return true;}
+    ArrayList<HashNode<K, V>> bucket = new ArrayList<>();
+    int numBuckets = 10;
+    int size;
 
-    public boolean containsKey(Object key){return true;}
+    public HashMap() {
+        for (int i = 0; i < numBuckets; i++) {
+            bucket.add(null);
+        }
+    }
 
-    public boolean containsValue(Object value){return true;}
+    public int size() {
+        return size;
+    }
 
-    public Integer get(String key){return -1;}
+    public boolean isEmpty() {
+        return size == 0;
+    }
 
-    public Integer put(String key, Integer value){return -1;}
+    private int hashCode(K key) {
+        int hashCod = key.hashCode();
+        return Math.abs(hashCod % numBuckets);
+    }
 
-    public Integer remove(Object key){return -1;}
+    public boolean containsKey(K key) {
+        return true;
+    }
 
-    public void clear(){}
+    public boolean containsValue(V value) {
+        return true;
+    }
 
-    public int hashCode(){return -1;}
+    public V get(K key) {
+        int index = hashCode(key);
+        HashNode<K, V> head = bucket.get(index);
+        while (head != null) {
+            if (head.key.equals(key)) {
+                return head.value;
+            }
+            head = head.next;
+        }
+        return null;
+    }
 
-    public String toString(){return "";};
+    public V remove(K key) {
+        int index = hashCode(key);
+        HashNode<K, V> head = bucket.get(index);
+        if (head == null) {
+            return null;
+        }
+        if (head.key.equals(key)) {
+            V val = head.value;
+            head = head.next;
+            bucket.set(index, head);
+            size--;
+            return val;
+        } else {
+            HashNode<K, V> prev = null;
+            while (head != null) {
+
+                if (head.key.equals(key)) {
+                    prev.next = head.next;
+                    size--;
+                    return head.value;
+                }
+                prev = head;
+                head = head.next;
+            }
+            return null;
+        }
+    }
+
+    public void put(K key, V value) {
+
+        int index = hashCode(key);
+        HashNode<K, V> head = bucket.get(index);
+        HashNode<K, V> toAdd = new HashNode<>();
+        toAdd.key = key;
+        toAdd.value = value;
+        if (head == null) {
+            bucket.set(index, toAdd);
+            size++;
+
+        } else {
+            while (head != null) {
+                if (head.key.equals(key)) {
+                    head.value = value;
+                    size++;
+                    break;
+                }
+                head = head.next;
+            }
+            if (head == null) {
+                head = bucket.get(index);
+                toAdd.next = head;
+                bucket.set(index, toAdd);
+                size++;
+            }
+        }
+        if ((1.0 * size) / numBuckets > 0.7) {
+            // do something
+            ArrayList<HashNode<K, V>> tmp = bucket;
+            bucket = new ArrayList<>();
+            numBuckets = 2 * numBuckets;
+            for (int i = 0; i < numBuckets; i++) {
+                bucket.add(null);
+            }
+            for (HashNode<K, V> headNode : tmp) {
+                while (headNode != null) {
+                    put(headNode.key, headNode.value);
+                    headNode = headNode.next;
+                }
+            }
+
+        }
+
+    }
+
+    public String toString() {
+        String todo = "";
+        for (int i = 0; i < numBuckets; i++) {
+            todo = todo + i + ".- ";
+            HashNode<K, V> head = bucket.get(i);
+            while (head != null) {
+                todo = todo + "(" + "key: " + head.key + " value: " + head.value + ") ";
+                head = head.next;
+            }
+            todo = todo + "\n";
+        }
+        return todo;
+    }
+
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("this", 1);
+        System.out.println(map);
+        // System.out.println(map.remove("this"));
+        System.out.println(map.containsValue(1));
+
+    }
 }

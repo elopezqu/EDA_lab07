@@ -1,17 +1,18 @@
-public interface HashTable{
+public interface HashTable <K, V>{
+
     /**
      * Retorna el numero de clave-valor registrado en la tabla hash.
      *
      * @return Retorna el numero de clave-valor registros en la tabla hash.
      */
-    int size();
+    public int size();
 
     /**
      * Retorna {@code true} si la tabla hash no contiene ningun registro.
      *
      * @return {@code true} si la tabla hash no contiene registros.
      */
-    boolean isEmpty();
+    public boolean isEmpty();
 
     /**
      * Retorna {@code true} Si la tabla contiene una clave determinada. Retorna {@code true} si y solo si 
@@ -22,7 +23,7 @@ public interface HashTable{
      * @throws NullPointerException si la clave es null
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    boolean containsKey(Object key);
+    public boolean containsKey(K key);
 
     /**
      * Returns {@code true} Si la tabla contiene uno o mas registros asociados a   
@@ -33,7 +34,7 @@ public interface HashTable{
      * @throws NullPointerException si el valor es null
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    boolean containsValue(Object value);
+    public boolean containsValue(V value);
 
     /**
      * Retorna el valor el cual corresponde a la clave o 
@@ -44,7 +45,7 @@ public interface HashTable{
      * @throws NullPointerException si la clave es null
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    Integer get(String key);
+    public V get(K key);
 
 
     /**
@@ -60,7 +61,7 @@ public interface HashTable{
      * @throws NullPointerException si la clave o valor son nulos
      * @throws ErrorException para otros tipos de error
      */
-    Integer put(String key, Integer value);
+    public void put(K key, V value);
 
     /**
      * Elimina el registro de una clave, si la clave existe 
@@ -72,20 +73,11 @@ public interface HashTable{
      * @throws NullPointerException si la clave es nula
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    Integer remove(Object key);
+    V remove(K key);
 
     /**
      * Elimina todos los registros de la tabla hash
      * La tabla hash estara vacia despues de llamar a este metodo.
-     */
-    void clear();
-
-    /**
-     * Retorna el codigo hash para TODA la tabla hash. 
-     * Este codigo hash esta definido por la suma de todos los codigos hash de cada entrada 
-     * de la tabla.  Eso aseguraria que {@code tablaHash1.equals(tablaHash2)} en base a sus hashCode,
-     * es decir, implica que {@code tablaHash1.hashCode() == tablaHash2.hashCode()} para cualquier par de
-     * tablas {@code tablaHash1} and {@code tablaHash2},
      */
     int hashCode();
     

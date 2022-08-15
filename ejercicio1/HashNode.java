@@ -1,12 +1,11 @@
-public class HashNode<K,V>{
-    private K key;
-    private V value;
-    private int hashCode;
-    private HashNode next;
+public class HashNode<K,V> {
+	K key;
+	V value;
+	HashNode<K, V>next;
+	public HashNode()
+	{
+		this.key=key;
+		this.value=value;
+	}
 
-    public HashNode(K key, V value, int hashCode){
-        this.key = key;
-        this.value = value;
-        this.hashCode = hashCode;
-    }
 }
