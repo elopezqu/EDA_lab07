@@ -2,9 +2,13 @@ import Propuestos.HashTable;
 
 public class HashMap implements HashTable{
 
-    public int size(){return -1;}
+    public int size(){
+    	return size;
+    }
 
-    public boolean isEmpty(){return true;}
+    public boolean isEmpty(){
+    	return size() == 0 
+    }
 
     public boolean containsKey(Object key){return true;}
 
