@@ -86,6 +86,6 @@ public interface HashTable <K, V>{
      */
     public String toString();
 
-    void clear();
+    public void clear();
 
 }
